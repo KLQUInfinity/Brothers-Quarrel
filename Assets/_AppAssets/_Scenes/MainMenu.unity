@@ -1458,9 +1458,9 @@ MonoBehaviour:
   AutoFindHolders: 1
   AllMenus:
   - {fileID: 1020302902}
-  - {fileID: 17458083}
-  - {fileID: 543541228}
   - {fileID: 566264728}
+  - {fileID: 543541228}
+  - {fileID: 17458083}
   CurActiveMenu: {fileID: 566264728}
   AnimateFirstMenuAtStart: 1
   AllPopups: []
@@ -1707,7 +1707,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!1 &636241863
 GameObject:
@@ -3728,7 +3728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d8a05aa282d838499e0e7785604e44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loading: {fileID: 0}
+  loadingSlider: {fileID: 1020302903}
 --- !u!4 &936642996
 Transform:
   m_ObjectHideFlags: 0
@@ -4149,6 +4149,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 095bf445064b15446861217159ab0f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1020302903 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114369075029741452, guid: 293359a4759a28c4382245962f675c14,
+    type: 3}
+  m_PrefabInstance: {fileID: 1020302900}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1062099001
@@ -5892,7 +5904,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &1426132988
 GameObject:
