@@ -28,7 +28,7 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private Transform gunContainerPos;
 
     private GameObject gunObj;
-    private GunManager gunManager;
+    private Gun gunManager;
     private float nextFire;
     private GameObject trapPrefab;
     #endregion
@@ -111,7 +111,8 @@ public class CharacterManager : MonoBehaviour
 
             playerEquipment = PlayerEquipment.Gun;
             gunObj = Instantiate(item, gunContainerPos, false) as GameObject;
-            gunManager = gunObj.GetComponent<GunManager>();
+            gunManager = gunObj.GetComponent<Gun>();
+            gunManager.Shoot();
         }
         else if (item.tag.Equals("Trap"))
         {
