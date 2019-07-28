@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 8846975212723145792}
   - component: {fileID: 9001139833053708870}
   m_Layer: 0
-  m_Name: Gun
+  m_Name: BubbleGun
   m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

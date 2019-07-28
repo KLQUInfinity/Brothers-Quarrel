@@ -22,14 +22,13 @@ public class CharacterManager : MonoBehaviour
     private bool isGrounded;
     #endregion
 
-    #region Shooting
+    #region Item Pick up
     [HideInInspector] public PlayerEquipment playerEquipment;
 
     [SerializeField] private Transform gunContainerPos;
 
     private GameObject gunObj;
     private Gun gunManager;
-    private float nextFire;
     private GameObject trapPrefab;
     #endregion
 
@@ -112,7 +111,7 @@ public class CharacterManager : MonoBehaviour
             playerEquipment = PlayerEquipment.Gun;
             gunObj = Instantiate(item, gunContainerPos, false) as GameObject;
             gunManager = gunObj.GetComponent<Gun>();
-            gunManager.Shoot();
+            //gunManager.Shoot();
         }
         else if (item.tag.Equals("Trap"))
         {

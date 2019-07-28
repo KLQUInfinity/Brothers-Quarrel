@@ -2,9 +2,11 @@
 
 public abstract class Gun : MonoBehaviour
 {
-    public Transform ShootingPoint;
-    public GameObject BulletPrefab;
-    public float FireRate;
+    [SerializeField] protected Transform ShootingPoint;
+    [SerializeField] protected GameObject BulletPrefab;
+    [SerializeField] protected float FireRate;
+
+    protected float NextRate;
 
 
     public virtual void Shoot(){}
