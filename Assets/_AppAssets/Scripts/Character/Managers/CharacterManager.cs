@@ -13,13 +13,13 @@ public class CharacterManager : MonoBehaviour
 
     #region Jump
     [Header("Jump")]
-    public float jumpPower;
+    public float JumpPower;
 
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float groundCheckRadius = 0.02f;
 
-    private bool isGrounded;
+    [SerializeField] private bool isGrounded;
     #endregion
 
     #region Item Pick up
@@ -32,7 +32,7 @@ public class CharacterManager : MonoBehaviour
     private GameObject trapPrefab;
     #endregion
 
-    [SerializeField] private int controllerIndex;
+    public int ControllerIndex;
 
     private Rigidbody2D myRB;
 
@@ -40,6 +40,11 @@ public class CharacterManager : MonoBehaviour
     {
         myRB = GetComponent<Rigidbody2D>();
         playerEquipment = PlayerEquipment.Empty;
+    }
+
+    private void Update()
+    {
+        Shoot();
     }
 
     private void FixedUpdate()
@@ -51,7 +56,7 @@ public class CharacterManager : MonoBehaviour
     private void Move()
     {
         // Move the Character
-        float movement = Input.GetAxisRaw("Horizontal_" + controllerIndex);
+        float movement = Input.GetAxisRaw("Horizontal_" + ControllerIndex);
         myRB.velocity = new Vector2(movement * moveSpeed * Time.deltaTime, myRB.velocity.y);
 
         // Flip the Character acording to move diraction
@@ -70,10 +75,10 @@ public class CharacterManager : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         // For Regular Jump
-        if (Input.GetAxisRaw("Jump_" + controllerIndex) != 0 && isGrounded)
+        if (Input.GetAxisRaw("Jump_" + ControllerIndex) != 0 && isGrounded)
         {
             isGrounded = false;
-            myRB.velocity = new Vector2(myRB.velocity.x, jumpPower * Time.deltaTime);
+            myRB.velocity = new Vector2(myRB.velocity.x, JumpPower * Time.deltaTime);
         }
     }
 
@@ -87,7 +92,10 @@ public class CharacterManager : MonoBehaviour
 
     private void Shoot()
     {
-        print("Shoot");
+        if (Input.GetAxisRaw("Fire1_" + ControllerIndex) != 0 && gunManager)
+        {
+            gunManager.Shoot(facingRight);
+        }
     }
 
     private void PutTrap()
@@ -96,9 +104,9 @@ public class CharacterManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Take the item the picked up from pick up base 
+    /// Take the item picked up from pick up base 
     /// </summary>
-    /// <param name="item"></param>
+    /// <param name="item">the picked up item</param>
     public void TakeNewItem(GameObject item)
     {
         if (item.tag.Equals("Gun"))

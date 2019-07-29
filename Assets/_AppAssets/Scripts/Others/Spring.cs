@@ -8,7 +8,7 @@ public class Spring : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            other.GetComponent<CharacterManager>().jumpPower += 200;
+            other.GetComponent<CharacterManager>().JumpPower += 200;
         }
     }
 
@@ -16,7 +16,7 @@ public class Spring : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            other.GetComponent<CharacterManager>().jumpPower -= 200;
+            other.GetComponent<CharacterManager>().JumpPower -= 200;
         }
     }
 }

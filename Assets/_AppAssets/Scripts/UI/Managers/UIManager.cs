@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private Slider loadingSlider;
+    [SerializeField] private Slider loadingSlider;      
 
     /// <summary>
     /// Exit the game
@@ -34,10 +34,10 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Moving from scene to another
     /// </summary>
-    /// <param name="scencName">index of the scene you will go to</param>
-    public void LoadLevel(string scencName)
+    /// <param name="sceneName">index of the scene you will go to</param>
+    public void LoadLevel(string sceneName)
     {
-        StartCoroutine(LoadAsynchronously(scencName));
+        StartCoroutine(LoadAsynchronously(sceneName));
     }
 
     private IEnumerator LoadAsynchronously(string sceneName)

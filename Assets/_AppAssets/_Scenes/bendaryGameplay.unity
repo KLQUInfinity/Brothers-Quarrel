@@ -322,6 +322,26 @@ PrefabInstance:
       propertyPath: controllerIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8772658130296926707, guid: 5a69458f69b73c046946c89d90acd4c9,
+        type: 3}
+      propertyPath: ControllerIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772658130296926707, guid: 5a69458f69b73c046946c89d90acd4c9,
+        type: 3}
+      propertyPath: JumpPower
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772658130296926707, guid: 5a69458f69b73c046946c89d90acd4c9,
+        type: 3}
+      propertyPath: FacingRight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772658130296926707, guid: 5a69458f69b73c046946c89d90acd4c9,
+        type: 3}
+      propertyPath: groundCheckRadius
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a69458f69b73c046946c89d90acd4c9, type: 3}
 --- !u!1 &1138737859
@@ -848,11 +868,6 @@ PrefabInstance:
     - target: {fileID: 8772658130296926711, guid: 5a69458f69b73c046946c89d90acd4c9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8772658130296926707, guid: 5a69458f69b73c046946c89d90acd4c9,
-        type: 3}
-      propertyPath: controllerIndex
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

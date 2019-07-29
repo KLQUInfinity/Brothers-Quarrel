@@ -6,8 +6,8 @@ public abstract class Gun : MonoBehaviour
     [SerializeField] protected GameObject BulletPrefab;
     [SerializeField] protected float FireRate;
 
-    protected float NextRate;
+    protected float nextFire;
 
 
-    public virtual void Shoot(){}
+    public virtual void Shoot(bool facingRight) {}
 }

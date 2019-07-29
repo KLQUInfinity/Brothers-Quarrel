@@ -146,15 +146,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 200
   facingRight: 1
-  jumpPower: 400
+  JumpPower: 400
   groundCheck: {fileID: 8772658131890998620}
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  groundCheckRadius: 0.02
+  groundCheckRadius: 0.1
+  isGrounded: 0
   playerEquipment: 0
   gunContainerPos: {fileID: 8772658131651205428}
-  controllerIndex: 1
+  ControllerIndex: 1
 --- !u!1 &8772658131544576073
 GameObject:
   m_ObjectHideFlags: 0
