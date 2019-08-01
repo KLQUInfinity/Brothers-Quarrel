@@ -1,0 +1,13 @@
+bubble gun 	target: other player  effect: make the other player get back -slow stright-
+water gun 	target: other player  effect: slow the other player by 50%  -curve-
+mud gun 	target: ground	      effect: make a slow area where any player get slow down -curve-
+slingshot 	target: other player  effect: shake the screen when hit and damage the other player - straight-
+shoe		target: other player  effect: damage the player (balanced projectile) - straight-
+rock  		target: other player  effect: damage the playerx2 (slow but high damage) -straight-
+marbles   	target: other player  effect: damage the player (fast projectile and low damage) -straight-
+net 		target: ground        effect: throw down restrict other player movement (when caught) for 4 seconds -curve- (big area of effect but visible) -cruve-
+rope            target: ground        effect: set trap (for 3 seconds) if other player s caught restrict movement for 8 seconds (small area of effect but invisible) -curve-
+walkie talkie	target: ground        effect: set one on the ground and the other in palyer hands if activated again produce sound that draws the ai mom -on the ground-
+breath equipment target: player       effect: make the player able to stay underwater (to hide) without taking damage for 30 seconds -none-
+
+item name , target , effect , how to shoot 	
