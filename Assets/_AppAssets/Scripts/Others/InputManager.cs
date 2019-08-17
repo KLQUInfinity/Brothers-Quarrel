@@ -13,6 +13,11 @@ public class InputManager : MonoBehaviour
             print("Horizontal_" + index+" pressed");
         }
 
+        if (Input.GetButtonDown("Horizontal_" + index) )
+        {
+            print("Horizontal_" + index + " sdafsasdfad");
+        }
+
         if (Input.GetAxis("Vertical_" + index) != 0)
         {
             print("Vertical_" + index + " pressed");

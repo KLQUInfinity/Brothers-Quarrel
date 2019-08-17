@@ -12,8 +12,6 @@ public class SelectCharPanel : MonoBehaviour
 
     private int selectIndex = 0;
     private bool keyDown = false;
-    private bool keyDown2 = false;
-    private bool keyDown3 = false;
     private bool canSelect = true;
 
     private void Update()
@@ -39,28 +37,17 @@ public class SelectCharPanel : MonoBehaviour
             else { keyDown = false; }
 
             // Select Char
-            if (Input.GetAxis("Fire1_" + ControllerIndex) != 0 && canSelect)
+            if (Input.GetButtonDown("Fire1_" + ControllerIndex) && canSelect)
             {
-                print("asdfsdaf");
-                if (!keyDown2)
-                {
-                    canSelect = !SelectionManager.SelectAvatar(selectIndex);
-                    keyDown2 = true;
-                }
+                canSelect = !SelectionManager.SelectAvatar(selectIndex);
             }
-            else { keyDown2 = false; }
 
             // Deselect Char
-            if (Input.GetAxis("Jump_" + ControllerIndex) != 0 && !canSelect)
+            if (Input.GetButtonDown("Jump_" + ControllerIndex) && !canSelect)
             {
-                if (!keyDown3)
-                {
-                    SelectionManager.DeselectAvatar(selectIndex);
-                    keyDown3 = true;
-                    canSelect = true;
-                }
+                SelectionManager.DeselectAvatar(selectIndex);
+                canSelect = true;
             }
-            else { keyDown3 = false; }
         }
     }
 }
